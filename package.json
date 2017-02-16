@@ -1,0 +1,26 @@
+{
+  "name": "week-15-burger-sequelize",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gitbchang/week-15-burger-sequelize.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gitbchang/week-15-burger-sequelize/issues"
+  },
+  "homepage": "https://github.com/gitbchang/week-15-burger-sequelize#readme",
+  "dependencies": {
+    "body-parser": "^1.16.1",
+    "express": "^4.14.1",
+    "mysql": "^2.13.0",
+    "sequelize": "^3.30.2"
+  }
+}
