@@ -29,12 +29,12 @@
     <div class="col s2"></div>
 
     <div class="col s4">
-        <ol>
+        <ol id="burgers">
             <!--uneaten burgers here-->
         </ol>
     </div>
     <div class="col s4">
-        <ol>
+        <ol id="devouredBurgers">
             <!--eaten burgers here-->
         </ol>
     </div>
@@ -48,7 +48,7 @@
 
         <form class="col s6" action="/" method="POST">
             <div class="input-field">
-                <textarea class="autocomplete" name="addBurger" id="burgerInputTextArea"></textarea>
+                <textarea style="background-color:white" class="autocomplete" name="addBurger" id="burgerInputTextArea"></textarea>
                 <label style="margin-left:10px" for="addBurger">Add a Burger!</label>
                 <button id="mainSubmit" class="btn waves-effect waves-light" type="submit">Submit
             <i class="material-icons right">send</i>
