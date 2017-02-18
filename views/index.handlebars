@@ -1,0 +1,60 @@
+<div class="container">
+    <div class="row">
+        <div class="col s3"></div>
+        <div class="col s6 center-align">
+            <img src="http://www.tastyburger.com/wp-content/themes/tastyBurger/images/home/img-large-burger.jpg" width="200px" class="materialboxed center-block">
+            <h1>EAT-DA-BURGER</h1>
+        </div>
+        <div class="col s3"></div>
+    </div>
+<div class="row">
+    <div class="col s2"></div>
+
+    <div class="col s4">
+        <ol>
+            {{#each burgs}} 
+                {{#unless this.is_eaten}}
+                    <li style="margin: 5px 5px 20px 5px;padding: 2px">
+                        {{this.burger_name}}
+                            <form style="display: inline-block; float:right" action="/{{this.burger_id}}?_method=PUT" method="POST">
+                            <input type="hidden" name="eat" value="false">
+                            <button data-id={{this.burger_id}} class="waves-effect waves-light btn" type="submit">DEVOUR IT!</button>
+                            </form>
+                    </li>
+                {{/unless}} 
+            {{/each}}
+        </ol>
+    </div>
+    <div class="col s4">
+        <ol>
+            {{#each burgs}} 
+                {{#if this.is_eaten}}
+                    <li style="color:gray;opacity: .85">
+                        {{this.burger_name}}
+                    </li>
+                {{/if}} 
+            {{/each}}
+        </ol>
+    </div>
+
+
+    <div class="col s2"></div>
+</div>
+    <div class="row">
+        <div class="col s3"></div>
+
+
+        <form class="col s6" action="/" method="POST">
+            <div class="input-field">
+                <textarea class="autocomplete" name="addBurger" id="burgerInputTextArea"></textarea>
+                <label style="margin-left:10px" for="addBurger">Add a Burger!</label>
+                <button id="mainSubmit" class="btn waves-effect waves-light" type="submit">Submit
+            <i class="material-icons right">send</i>
+            </button>
+            </div>
+        </form>
+
+
+        <div class="col s3"></div>
+    </div>
+</div>

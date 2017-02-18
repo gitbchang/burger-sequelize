@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
+	<!--get icons-->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<!-- Compiled and minified CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+	<!-- Compiled and minified JavaScript -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<link rel="stylesheet" href="/assets/css/style.css" type="text/css"/>
+	<title>MVC With Burgers!</title>
+</head>
+
+<body>
+<script type="text/javascript">
+    $(document).ready(function () {
+        // FOR THE BURGER PICTURE
+        $('.materialboxed').materialbox();
+        // When dynamically changing the value of a textarea with methods like jQuery's .val(), you must trigger an autoresize on it afterwords because .val() does not automatically trigger the events we've binded to the textarea.
+        $('#textarea1').val('New Text');
+        $('#textarea1').trigger('autoresize');
+
+//		$("#mainSubmit").on("click", function(e){
+//			e.preventDefault();
+//		});
+
+//		$(".btn").on("click", function(e){
+//			console.log($(this).data("id"));
+//		});
+
+
+    }); // end of document ready
+</script>
+	{{{ body }}}
+</body>
+
+</html>

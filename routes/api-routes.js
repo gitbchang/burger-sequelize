@@ -11,7 +11,7 @@ var Burger = require("../models/burgermodel.js");
 // =============================================================
 module.exports = function(app) {
 
-  // Get all books
+  // Get all burgers
   app.get("/api/all", function(req, res) {
       Burger.findAll({})
       .then(function(result){
