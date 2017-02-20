@@ -18,7 +18,7 @@
                         {{this.burger_name}}
                             <form style="display: inline-block; float:right" action="/{{this.burger_id}}?_method=PUT" method="POST">
                             <input type="hidden" name="eat" value="false">
-                            <button data-id={{this.burger_id}} class="waves-effect waves-light btn" type="submit">DEVOUR IT!</button>
+                            <button data-id={{this.id}} class="waves-effect waves-light btn" type="submit">DEVOUR IT!</button>
                             </form>
                     </li>
                 {{/unless}} 

@@ -6,13 +6,6 @@ var router = express.Router();
 var db = require("../models");
 
 router.get("/", function(req, res){
-    // burger.findAll(function(data){
-    //     var burgerObject = {
-    //         burgs: data
-    //     };
-
-    //     res.render("index", burgerObject);
-    // });    
 
     db.burgers.findAll({})
       .then(function(result){
@@ -25,10 +18,17 @@ router.get("/", function(req, res){
 });
 
 router.post("/", function(req, res){
-    burger.create(req.body.addBurger, function(){
+
+    var newBurger = {
+        burger_name: req.body.addBurger,
+        
+    }
+    db.burgers.create(newBurger).then(function(result){
+        // if you res.json the result, it will redirect and show the newBurger's json object
+        // res.json(result);
         res.redirect("/");
-        console.log(res);
-    });
+        // console.log(result);
+    })
 });
 
 router.put("/:id", function(req, res){
