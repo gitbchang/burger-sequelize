@@ -10,6 +10,14 @@ module.exports = function(sequelize, DataTypes){
             type: DataTypes.STRING,
             allowNull: false
         }
+    },
+        {
+        classMethods: {
+            associate: function(models){
+                models.burgers.hasOne(models.burger_owner);
+                models.burger_owner.belongsTo(models.burgers);
+            }
+        }
     });
 
 }

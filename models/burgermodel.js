@@ -19,19 +19,18 @@ module.exports = function(sequelize, DataTypes){
             defaultValue: false,
             allowNull: false
         },
-
-
     },
     {
         timestamps: true
-    }, 
-    {
-        classMethods: {
-            associate: function(models){
-                models.burgers.hasOne(models.burger_owner);
-                models.burger_owner.belongsTo(models.burgers);
-            }
-        }
-    });
+    }
+    ); 
+    // ,{
+    //     classMethods: {
+    //         associate: function(models){
+    //             models.burgers.hasOne(models.burger_owner);
+    //             models.burger_owner.belongsTo(models.burgers);
+    //         }
+    //     }
+    // });
     return burger;
 }

@@ -7,7 +7,7 @@ var db = require("../models");
 
 router.get("/", function(req, res){
     // include: [db.burger_owner]
-    db.burgers.findAll({})
+    db.burgers.findAll({include: [db.burger_owner]})
       .then(function(result){
         var burgerObject = {
           burgs: result          
@@ -32,10 +32,6 @@ router.post("/", function(req, res){
 });
 
 router.post("/api/:id", function(req, res){
-    // burger.update(req.params.id, function(){
-    //     res.redirect("/");
-    //     console.log(res);
-    // });
     db.burgers.update({
         devoured: 1
     },
