@@ -15,7 +15,11 @@ module.exports = function(app) {
   app.get("/api/all", function(req, res) {
       Burger.findAll({})
       .then(function(result){
-        return res.json(result);
+        var burgerObject = {
+          burgs: result
+        }
+
+        res.render("index", burgerObject);
       });
   });
 

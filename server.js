@@ -41,11 +41,15 @@ app.use(express.static("app/public"));
 
 // Routes
 // =============================================================
-// inside the api route - send the data to handlebars
-var api = require("./routes/api-routes.js")(app);
-var html = require("./routes/html-routes.js")(app);
 
-app.use("/", html);
+// commenting out the below example route and using a single controller file instead
+// require("./routes/api-routes.js")(app);
+// require("./routes/html-routes.js")(app);
+
+var routes = require("./controllers/burgerController.js");
+
+app.use("/", routes);
+
 
 
 // Starts the server to begin listening

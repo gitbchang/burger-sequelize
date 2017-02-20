@@ -13,7 +13,7 @@
     <div class="col s4">
         <ol>
             {{#each burgs}} 
-                {{#unless this.is_eaten}}
+                {{#unless this.devoured}}
                     <li style="margin: 5px 5px 20px 5px;padding: 2px">
                         {{this.burger_name}}
                             <form style="display: inline-block; float:right" action="/{{this.burger_id}}?_method=PUT" method="POST">
@@ -28,7 +28,7 @@
     <div class="col s4">
         <ol>
             {{#each burgs}} 
-                {{#if this.is_eaten}}
+                {{#if this.devoured}}
                     <li style="color:gray;opacity: .85">
                         {{this.burger_name}}
                     </li>
