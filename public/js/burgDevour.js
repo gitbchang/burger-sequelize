@@ -1,4 +1,4 @@
-$(document).on("click", ".devourButton", function(e){
+$(document).one("click", ".devourButton", function(e){
     console.log(e);
     var burgID = $(this).data("id");
     // var ownerVal = $(".ownerName").val().trim();
