@@ -37,7 +37,6 @@ router.post("/api/:id", function(req, res){
         devoured: 1
     },
     {
-
         where: {
             id: req.params.id
         }
@@ -56,6 +55,7 @@ router.post("/api/owner/:id", function(req, res){
     };
     db.burger_owner.create(newBurgOwner).then(function(result){
         res.json("Owner has been updated");
+        res.redirect("/");
     });
 });
 
