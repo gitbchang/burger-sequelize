@@ -53,11 +53,11 @@ router.post("/api/owner/:id", function(req, res){
     var newBurgOwner = {
         ownerName: req.body.name,
         burgerId: req.params.id
-    }
+    };
     db.burger_owner.create(newBurgOwner).then(function(result){
         res.json("Owner has been updated");
-    })
-})
+    });
+});
 
 
 module.exports = router;

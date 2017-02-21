@@ -18,5 +18,5 @@ $(document).on("click", ".devourButton", function(e){
 
 function getCorrectOwnerValue(burgID){
     return $(".ownerName[data-ownerid='"+ burgID + "']").val().trim();
-};
+}
 
