@@ -19,8 +19,8 @@
                         <div class="col s12">
                             
                             
-                            <input placeholder="Burger Owner" id="first_name" type="text" class="validate">
-                            <input type="hidden" name="eat" value="false">
+                            <input data-ownerid={{this.id}} placeholder="Burger Owner" type="text" class="validate ownerName">
+                            {{!--<input type="hidden" name="eat" value="false">--}}
                             <button data-id={{this.id}} class="waves-effect waves-light btn devourButton" type="submit">DEVOUR IT!</button>
                         </div>
                     </div>
@@ -32,7 +32,7 @@
             <ol>
                 {{#each burgs}} {{#if this.devoured}}
                 <li style="color:gray;opacity: .85">
-                    {{this.burger_name}}
+                    <div><span>{{this.burger_name}}</span> eaten by {{this.burger_owner.ownerName}}</div>
                 </li>
                 {{/if}} {{/each}}
             </ol>
@@ -53,3 +53,4 @@
         <div class="col s3"></div>
     </div>
 </div>
+
