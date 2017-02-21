@@ -5,7 +5,7 @@ $(document).on("click", ".devourButton", function(e){
     var ownerVal = getCorrectOwnerValue(burgID);
     
     $.post("/api/"+burgID).then(function(result){
-        console.log(result);
+        // console.log(result);
     });
     var ownerObject = {
         name: ownerVal

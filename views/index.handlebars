@@ -32,7 +32,7 @@
             <ol>
                 {{#each burgs}} {{#if this.devoured}}
                 <li style="color:gray;opacity: .85">
-                    <div><span>{{this.burger_name}}</span> eaten by {{this.burger_owner.ownerName}}</div>
+                    <div><span style="font-weight: bold">{{this.burger_name}}</span> eaten by {{this.burger_owner.ownerName}}</div>
                 </li>
                 {{/if}} {{/each}}
             </ol>
