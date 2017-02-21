@@ -13,6 +13,7 @@ $(document).on("click", ".devourButton", function(e){
 
     $.post("/api/owner/"+burgID, ownerObject).then(function(result){
         console.log(result);
+        window.location= "/";
     });
 });
 
